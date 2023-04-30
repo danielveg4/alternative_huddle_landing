@@ -16,10 +16,10 @@
 }
 
 .logo {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 104px;
+  max-height: 20px;
   position: relative;
-  top: 0.8rem;
+  top: 1.2rem;
   @include responsive(laptop) {
     max-width: 80%;
     max-height: 80%;
@@ -32,21 +32,36 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background-color: #EDFBFF;
+  background-image: url(assets/images/bg-hero-mobile.svg);
+
 
   @include responsive(laptop) {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    background-image: url(assets/images/bg-hero-desktop.svg);
   }
+
+&__portal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include responsive(laptop) {
+    align-items: start;
+    text-align: left;
+      }
+}
+
   &__button {
     position: relative;
     top: 1rem;
     text-align: center;
     padding: 0.2rem;
     font-size: 0.9rem;
-    color: #ff52c1;
-    border: 1px solid #ff52c1;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 5px #ff52c1;
     border-radius: 15px;
-    width: 80px;
+    width: 100px;
     height: 25px;
     @include responsive(laptop) {
       width: 140px;
@@ -54,6 +69,7 @@
       padding: 0.5rem;
       font-size: 1.3rem;
       border-radius: 20px;
+      
     }
   }
   &__title {
@@ -64,6 +80,8 @@
     margin-top: 3rem;
     @include responsive(laptop) {
       font-size: 3.65rem;
+      text-align: left;
+      padding-left: 5rem;
     }
   }
   &__getstarted {
@@ -83,6 +101,7 @@
       font-size: 1.5rem;
       width: 400px;
       height: 80px;
+      margin-left: 5rem;
     }
   }
 
@@ -90,13 +109,15 @@
     color: #00252e;
     font-weight: normal;
     padding: 1.5rem;
+    font-size: 1.15rem;
     padding-top: 0;
     text-align: center;
 
     @include responsive(laptop) {
-      padding-left: 25%;
+        padding-left: 5rem;
       padding-right: 25%;
       font-size: 1.4rem;
+      text-align: left;
     }
   }
 
@@ -106,6 +127,7 @@
     margin-top: 3rem;
     @include responsive(laptop) {
       width: 1000px;
+      padding-right: 5rem;
     }
   }
 }
@@ -114,4 +136,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include responsive(laptop) {
+    flex-direction: row;
+  }
 }
